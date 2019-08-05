@@ -43,11 +43,11 @@
                     <a class="nav-link js-scroll-trigger" href="#Emotions">Emotions</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#Gifs">Gifs</a>
+              </li>
+                <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#Images">Images</a>
                 </li>
-                <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#Quotes">Quotes</a>
-                    </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#Videos">Videos</a>
                 </li>
@@ -70,25 +70,61 @@
     <section class="emotion-section p-3 p-lg-5 d-flex align-items-center" id="Emotions">
       <div class="w-100">
         <h1 class="mb-0">E<span class="text-primary">Motions</span></h1>
-        <div class="subheading mb-5">The App that helps you manage your mood. </div>
-        <p class="lead mb-5"><span class="text-primary">Click one of the icons below to let us know how you feel.</span>  We will surprise you with a range of entertainment options that match your mood. To navigate through the entertainment options, just use the sidebar to your left.  Moody? Changing your mood is easy! <span class="text-primary">Click the emotion or the Icon to your left to come back here</span></p>
-        <div class="emotion-icons">
-          <a>
-            <i class="fas fa-smile mood" value="happy"></i>
-          </a>
-          <a>
-            <i class="fas fa-sad-tear mood" value="sad"></i>
-          </a>
-          <a>
-            <i class="fas fa-angry mood" value="angry"></i>
-          </a>
-          <a>
-            <i class="fas fa-meh-blank mood" value="calm"></i>
-          </a>
+        <div class="emotion-item d-flex flex-column flex-md-row justify-content-between">
+          <span>
+            <div class="subheading mb-5">The App that helps you manage your mood. </div>
+            <p class="lead mb-5"><span class="text-primary">Click one of the icons below to let us know how you feel.</span>  We will surprise you with a range of entertainment options that match your mood. To navigate through the entertainment options, just use the sidebar to your left.  Moody? Changing your mood is easy! <span class="text-primary">Click the emotion or the Icon to your left to come back here</span></p>
+            <div class="emotion-icons mb-5">
+              <a>
+                <i class="fas fa-smile mood" value="happy"></i>
+              </a>
+              <a>
+                <i class="fas fa-sad-tear mood" value="sad"></i>
+              </a>
+              <a>
+                <i class="fas fa-angry mood" value="angry"></i>
+              </a>
+              <a>
+                <i class="fas fa-meh-blank mood" value="calm"></i>
+              </a>
+            </div>
+          </span>
+          <div class="picture-upload text-md-right">
+            <div class="mb-3 picture-placeholder">
+              <img src="img/pictureup.png" height="250" alt="upload your picture" class="placeholder">
+            </div>
+            <div class="mb-3">
+              <input type="file" onchange="pictureUpload()">
+            </div>
+            <div class="mb-3">
+              <img src="" height="250" alt="" class="img-url">
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- Emotions Section End -->
+
+    <hr class="m-0">
+
+    <!-- Gifs Section Start -->
+    <section class="emotion-section p-3 p-lg-5 d-flex align-items-center" id="Gifs">
+      <div class="w-100">
+        <h2 class="mb-5">Gifs</h2>
+
+        <div class="emotion-item d-flex flex-column flex-md-row justify-content-center mb-5">
+          <div class="emotion-content" id="Gif-display">
+            <div class="mb-3 gif-content">
+              <img src="img/best-windows-10-screensavers-header-800x400.jpg" alt="">
+            </div>
+            <div class="gif-forward-back text-md-center">
+              <a><i class="fas fa-arrow-circle-left" id = "gif-back"></i></a>
+              <a><i class="fas fa-arrow-circle-right" id = "gif-forward"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Gifs Section End -->
 
     <hr class="m-0">
 
@@ -111,40 +147,48 @@
     </section>
     <!-- Images Section End -->
 
+    <hr class="m-0">
+
+    <!-- Videos Section Start -->
+    <section class="emotion-section p-3 p-lg-5 d-flex align-items-center" id="Videos">
+      <div class="w-100">
+        <h2 class="mb-5">Videos</h2>
+
+        <div class="emotion-item d-flex flex-column flex-md-row justify-content-center mb-5">
+          <div class="emotion-content" id="video-display">
+            <div class="mb-3 video-content">
+            </div>
+            <hr class="m-0">
+            <div class="mb-3 main-video-content overflow-auto">
+            </div>
+            <hr class="m-0">
+
+        </div>
+      </div>
+    </section>
+    <!-- Videos Section End -->
 
     <hr class="m-0">
 
-    <!-- Quotes Section Start -->
-    <section class="emotion-section p-3 p-lg-5 d-flex align-items-center" id="Quotes">
+
+    <!-- Movies Section Start -->
+    <section class="emotion-section p-3 p-lg-5 d-flex align-items-center" id="Movies">
       <div class="w-100">
-        <h2 class="mb-5">Quotes</h2>
+        <h2 class="mb-5">Movies</h2>
 
-        <div class="emotion-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="emotion-content">
-            <h3 class="mb-0">University of Colorado Boulder</h3>
-            <div class="subheading mb-3">Bachelor of Science</div>
-            <div>Computer Science - Web Development Track</div>
-            <p>GPA: 3.23</p>
-          </div>
-          <div class="emotion-controls text-md-right">
-            <span class="text-primary">August 2006 - May 2010</span>
+        <div class="emotion-item d-flex flex-column flex-md-row justify-content-center mb-5">
+          <div class="emotion-content" id="movie-display">
+            <div class="mb-3 movie-content">
+              <img src="img/best-windows-10-screensavers-header-800x400.jpg" alt="">
+            </div>
+            <div class="movie-forward-back text-md-center">
+              <a><i class="fas fa-arrow-circle-left" id = "movie-back"></i></a>
+              <a><i class="fas fa-arrow-circle-right" id = "movie-forward"></i></a>
           </div>
         </div>
-
-        <div class="emotion-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="emotion-content">
-            <h3 class="mb-0">James Buchanan High School</h3>
-            <div class="subheading mb-3">Technology Magnet Program</div>
-            <p>GPA: 3.56</p>
-          </div>
-          <div class="emotion-controls text-md-right">
-            <span class="text-primary">August 2002 - May 2006</span>
-          </div>
-        </div>
-
       </div>
     </section>
-    <!-- Quotes Section End -->
+    <!-- Movies Section End -->
 
     <hr class="m-0">
 
@@ -212,17 +256,6 @@
     </section>
     <!-- Videos Section End -->
 
-    <hr class="m-0">
-
-    <!-- Movies Section Start -->
-    <section class="emotion-section p-3 p-lg-5 d-flex align-items-center" id="Movies">
-      <div class="w-100">
-        <h2 class="mb-5">Movies</h2>
-        <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
-      </div>
-    </section>
-    <!-- Movies Section End -->
 
     <hr class="m-0">
 
@@ -267,6 +300,11 @@
 
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <!-- cloudflare Start-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <!-- cloudflare End-->
 
   <!-- Bootstrap core JavaScript -->
   <script src="third_party_files/jquery/jquery.min.js"></script>
@@ -275,9 +313,22 @@
   <!-- Plugin JavaScript -->
   <script src="third_party_files/jquery-easing/jquery.easing.min.js"></script>
 
+  <!-- IMPORTANT TO HAVE -->
+  <!-- Firebase Core JavaScript Link -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <!-- Specific Firebase products we want (Database) -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+  <!-- firebase cloud storage -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-storage.js"></script>
+
   <!-- Custom scripts for this template -->
   <script src="js/style.js"></script>
+  <script src="js/face_recognition.js"></script>
+  <script src="js/emotion.js"></script>
   <script src="js/images.js"></script>
+  <script src="js/gifs.js"></script>
+  <script src="js/videos.js"></script>
+
 </body>
 
 </html>

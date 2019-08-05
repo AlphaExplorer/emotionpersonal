@@ -27,35 +27,4 @@
 
 })(jQuery); // End of use strict
 
-$(document).on("click", ".fa-smile", function(){
-    // Appending the gif to the App_response div
-    $(".sidebar-icon").empty();
-    $(".sidebar-icon").append('<div class="emotion-icons"><a href="Emotions"><i class="fas fa-smile"></i></a></div>');
-    $(".Emotion").empty();
-    $(".Emotion").append('<a class="nav-link js-scroll-trigger" href="#Emotions">Happy</a>')
-});
-
-$(document).on("click", ".fa-sad-tear", function(){
-  // Appending the gif to the App_response div
-  $(".sidebar-icon").empty();
-  $(".sidebar-icon").append('<div class="emotion-icons"><a href="Emotions"><i class="fas fa-sad-tear"></i></a></div>');
-  $(".Emotion").empty();
-  $(".Emotion").append('<a class="nav-link js-scroll-trigger" href="#Emotions">Sad</a>')
-});
-
-$(document).on("click", ".fa-angry", function(){
-  // Appending the gif to the App_response div
-  $(".sidebar-icon").empty();
-  $(".sidebar-icon").append('<div class="emotion-icons"><a href="Emotions"><i class="fas fa-angry"></i></a></div>');
-  $(".Emotion").empty();
-  $(".Emotion").append('<a class="nav-link js-scroll-trigger" href="#Emotions">Angry</a>')
-});
-
-$(document).on("click", ".fa-meh-blank", function(){
-  // Appending the gif to the App_response div
-  $(".sidebar-icon").empty();
-  $(".sidebar-icon").append('<div class="emotion-icons"><a href="Emotions"><i class="fas fa-meh-blank"></i></a></div>');
-  $(".Emotion").empty();
-  $(".Emotion").append('<a class="nav-link js-scroll-trigger" href="#Emotions">Calm</a>')
-});
 

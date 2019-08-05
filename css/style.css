@@ -185,7 +185,24 @@ a:hover, a:focus, a:active {
   color: #824027;
 }
 
-.image-content{
+.image-content {
+  height:25rem ;
+}
+
+.gif-content {
+  height:25rem ;
+}
+
+.video-content {
+  height:25rem ;
+}
+
+.main-video-content {
+  height: 10rem ;
+  width: 50rem;
+}
+
+.movie-content {
   height:25rem ;
 }
 
@@ -208,4 +225,58 @@ a:hover, a:focus, a:active {
 
 .imgage-forward-back a:hover {
   background-color: #BD5D38;
+}
+
+.gif-forward-back a {
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
+  background-color: #495057;
+  color: #fff !important;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 5rem;
+  margin-right: 1rem;
+}
+
+.gif-forward-back a:last-child {
+  margin-right: 0;
+}
+
+.gif-forward-back a:hover {
+  background-color: #BD5D38;
+}
+
+article {
+  align-items: center;
+}
+
+.thumb {
+  height: 8rem;
+}
+
+.movie-forward-back a {
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
+  background-color: #495057;
+  color: #fff !important;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 5rem;
+  margin-right: 1rem;
+}
+
+.movie-forward-back a:last-child {
+  margin-right: 0;
+}
+
+.movie-forward-back a:hover {
+  background-color: #BD5D38;
+}
+
+.details{
+  padding: 0 0 0 1rem;
 }
