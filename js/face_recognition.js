@@ -1,3 +1,5 @@
+var api_face_recognition;
+
 // THIS makes the request for the user to browse and upload a picture from its computer
 function pictureUpload(){
     var preview = document.querySelector('.img-url'); //selects the query named img
@@ -31,7 +33,8 @@ function face_recognition(url)
         }
     }).then(function (response) 
     {      
-        // Saving the response 
+        // Saving the response
+        api_face_recognition = response;
         console.log(response)                
         emotionLog (response)
 })
@@ -42,7 +45,7 @@ function emotionLog (response)
     // The strongest emotion is obtained
     var strongEmotion = response.facial_emotion[0].tag.toLowerCase()
     // console.log(response.facial_emotion[0].tag)
-    if (strongEmotion === "surprise")
+    if (strongEmotion === "neutral" || strongEmotion === "surprise")
     {
         var strongEmotion = "happy"
     }
@@ -50,7 +53,7 @@ function emotionLog (response)
     {
         var strongEmotion = "angry"
     }
-    if (strongEmotion === "neutral" || strongEmotion === "fear")
+    if (strongEmotion === "fear")
     {
         var strongEmotion = "calm"
     }
